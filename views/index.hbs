@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>{{data.title}}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href='css/styles.css' rel='stylesheet' />
+  <body>
+    <div style='overscroll-behavior: none'>
+      <div
+        class='fixed w-full bg-orange-400 h-16 pt-2 text-white flex justify-between shadow-md'
+        style='top: 0px; overscroll-behavior: none'
+      >
+        <!-- Header Box -->
+        <div
+          id='header-box'
+          class='ml-5 my-3 text-white font-bold text-lg tracking-wide'
+        >
+        </div>
+      </div>
+      <!-- Chat Box -->
+      <div id='chat-box' class='mt-20 mb-16 overflow-auto'></div>
+    </div>
+
+    <form
+      id='chat-form'
+      class='fixed w-full mt-5 mb-0 flex justify-between bg-orange-400'
+      style='bottom: 0px'
+    >
+      <input
+        id='chat-input-box'
+        class='flex-grow m-2 py-2 px-4 mr-1 rounded-full border resize-none'
+        placeholder='Chat...'
+        style='outline: none'
+      />
+      <button class='m-2' style='outline: none' type='submit'>
+        Send
+      </button>
+    </form>
+    <script src='https://unpkg.com/@babel/standalone/babel.min.js'></script>
+    <script src='https://polyfill.io/v3/polyfill.min.js?features=default%2Ces2015%2Ces2016%2Ces2017%2Ces2018%2Ces2019'></script>
+    {{!-- <script src='https://cdn.socket.io/3.1.3/socket.io.min.js' integrity='sha384-cPwlPLvBTa3sKAgddT6krw0cJat7egBga3DJepJyrLl4Q9/5WLra3rrnMcyTyOnh' crossorigin='anonymous'></script> --}}
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js" integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+" crossorigin="anonymous"></script>
+    <script src='js/scripts.js'></script>
+  </body>
+</html>
